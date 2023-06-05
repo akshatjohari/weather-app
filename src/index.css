@@ -34,3 +34,14 @@ code {
 .goBack:hover {
   opacity: 1;
 }
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.todobutton {
+  position: absolute;
+  color: white;
+  right: 100px;
+  top: 60px;
+}

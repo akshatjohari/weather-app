@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import React from "react";
 
+import mainGIF from "../icons/partly-cloudy-day.gif";
+
 const SearchBox = styled.form`
   display: flex;
   flex-direction: row;
@@ -44,9 +46,7 @@ const CityComponent = (props) => {
   const { updateCity, fetchWeather } = props;
   return (
     <>
-      <WelcomeWeatherLogo
-        src={"/react-weather-app/icons/partly-cloudy-day.gif"}
-      />
+      <WelcomeWeatherLogo src={mainGIF} />
       <ChooseCityLabel>Find Weather of your city</ChooseCityLabel>
       <SearchBox onSubmit={fetchWeather}>
         <input
