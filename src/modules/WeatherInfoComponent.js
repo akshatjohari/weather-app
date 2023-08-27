@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import humidImg from "../icons/humidity.svg";
-import nightImg from "../icons/night.svg";
 import pressureImg from "../icons/pressure.svg";
 import tempImg from "../icons/temp.svg";
 import windImg from "../icons/wind.svg";
@@ -105,6 +104,8 @@ const WeatherComponent = (props) => {
       timeStamp * 1000
     ).getMinutes()}`;
   };
+
+  // *1000 convert seconds into milliseconds
   return (
     <>
       <WeatherContainer>

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+// Styling your way with speed, strong typing, and flexibility
 import Axios from "axios";
+
+// Components
 import CityComponent from "./modules/CityComponent";
 import WeatherInfoComponent from "./modules/WeatherInfoComponent";
 
@@ -27,20 +30,17 @@ const AppLabel = styled.span`
 function App() {
   const [city, updateCity] = useState();
   const [weather, updateWeather] = useState();
+
   const fetchWeather = async (e) => {
     e.preventDefault();
     const response = await Axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d1d9f2baf3364c4ceb0815d697bb9f77`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
     );
     updateWeather(response.data);
   };
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      <a href="http://localhost:3000/">
-        <span className="material-symbols-outlined todobutton">list_alt</span>
-      </a>
-
       {city && weather ? (
         <WeatherInfoComponent weather={weather} city={city} />
       ) : (
