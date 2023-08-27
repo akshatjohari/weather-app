@@ -18,6 +18,11 @@ const Container = styled.div`
   box-shadow: 0 3px 6px 0 #555;
   background: white;
   font-family: Montserrat;
+  
+  @media (max-width: 480px) {
+    width: 270px;
+  }
+  
 `;
 
 const AppLabel = styled.span`
