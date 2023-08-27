@@ -20,7 +20,7 @@ const Container = styled.div`
   font-family: Montserrat;
   
   @media (max-width: 480px) {
-    width: 270px;
+    width: 300px;
   }
   
 `;
